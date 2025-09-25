@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<link id="favicon" rel="icon" type="image/png" href="">
+<link rel="preload" href="https://cdn.discordapp.com/avatars/1011097119689560124/232eaeb270542d355bffbb32d0e57f60.png?size=128" as="image">
+<link rel="preload" href="https://cdn.discordapp.com/avatars/1011097119689560124/27c685392e79ae7702c9abf2745d62a7.png?size=128" as="image">
+<link rel="preload" href="https://tse2.mm.bing.net/th/id/OIP.786j1Omfn5v_4aAUNBdepgHaG8?rs=1&pid=ImgDetMain&o=7&rm=3">
+<link rel="icon" href="https://tse2.mm.bing.net/th/id/OIP.786j1Omfn5v_4aAUNBdepgHaG8?rs=1&pid=ImgDetMain&o=7&rm=3">
+
+  <meta charset="UTF-8">
+  <title>Goblin 開源授權條款</title>
+  <style>
+    body {
+      font-family: "Tahoma", sans-serif;
+      padding: 2em;
+      line-height: 1.6;
+      transition: background 1s ease;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .emoji {
+      font-size: 1.5em;
+    }
+    .license-block {
+      margin-top: 2em;
+      border-top: 3px solid #ccc;
+      padding-top: 1em;
+    }
+
+    /* 背景風格 */
+    .bg-0 {
+      background: repeating-linear-gradient(45deg, #f0f8ff 0px, #f0f8ff 20px, #e6f7ff 20px, #e6f7ff 40px);
+    }
+    .bg-1 {
+      background-image: linear-gradient(to right, #ffcccc 1px, transparent 1px),
+                        linear-gradient(to bottom, #ffcccc 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .bg-2 {
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      background-color: #fdf6e3;
+    }
+    .bg-3 {
+      background: url('https://emojicombos.com/images/backgrounds/emoji-rain.gif');
+      background-size: cover;
+    }
+
+    /* 頭像動畫 */
+    .avatar {
+      width: 120px;
+      border-radius: 50%;
+      animation: float 4s infinite ease-in-out;
+      display: block;
+      margin: 0 auto 1em auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: opacity 1s ease-in-out;
+    }
+
+    /* 詩歌動畫 */
+    .poem {
+      animation: pulse 3s infinite;
+    }
+
+    /* 動畫定義 */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+  </style>
+  <script>
+    const hour = new Date().getHours();
+    const bgClass = 'bg-' + (hour % 4);
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add(bgClass);
+
+      const avatars = [
+        "https://cdn.discordapp.com/avatars/1011097119689560124/232eaeb270542d355bffbb32d0e57f60.png?size=1024",
+        "https://cdn.discordapp.com/avatars/1011097119689560124/27c685392e79ae7702c9abf2745d62a7.png?size=1024"
+      ];
+      let index = 0;
+      const avatarEl = document.getElementById("avatar");
+      setInterval(() => {
+        index = (index + 1) % avatars.length;
+        avatarEl.style.opacity = 0;
+        setTimeout(() => {
+          avatarEl.src = avatars[index];
+          avatarEl.style.opacity = 1;
+        }, 500);
+      }, 5000);
+    });
+const hour = new Date().getHours();
+  const favicons = [
+    "https://cdn.discordapp.com/avatars/1011097119689560124/232eaeb270542d355bffbb32d0e57f60.png?size=128",
+    "https://cdn.discordapp.com/avatars/1011097119689560124/27c685392e79ae7702c9abf2745d62a7.png?size=128"
+  ];
+  const faviconEl = document.getElementById("favicon");
+  faviconEl.href = favicons[hour % favicons.length];
+  </script>
+</head>
+<body>
+
+  <img id="avatar" src="https://cdn.discordapp.com/avatars/1011097119689560124/232eaeb270542d355bffbb32d0e57f60.png?size=1024" alt="Goblin Avatar" class="avatar">
+  <h1 class="emoji">🧙 Goblin 開源授權條款</h1>
+  <p>上次更新：2025 年 9 月</p>
+
+  <div class="license-block">
+    <h2>📜 授權條款（MIT 精神）</h2>
+    <p>本程式碼依據 MIT 授權條款開放使用，允許任何人自由使用、修改、散佈，唯須保留原始作者 hray1413 之署名。</p>
+    <p>本程式碼以 Goblin 儀式感為核心，使用者不得移除 onboarding 詩歌、emoji 排版與 debug 彩蛋。</p>
+  </div>
+
+  <div class="license-block">
+    <h2>🧵 Goblin 條款補充</h2>
+    <ul>
+      <li>禁止無靈魂技術：不得用於 RAID 0 無備份架構或技術剝削。</li>
+      <li>Dupe 合法化：在紙化災難環境下允許 Dupe 流程，唯須保留 meme 詩意。</li>
+      <li>儀式感保留：README 中之 onboarding 詩歌與 emoji 排版不得刪除。</li>
+    </ul>
+  </div>
+
+  <div class="license-block poem">
+    <h2>🧪 onboarding 詩歌</h2>
+    <p>
+      此程式如詩，條款如咒，<br>
+      下載即啟動，debug即冒險。<br>
+      請保留靈魂，勿剝奪 meme，<br>
+      Goblin 祝你 coding 有靈，儀式有光。
+    </p>
+  </div>
+
+  <div class="license-block">
+    <h2>📦 LICENSE 檔案</h2>
+    <p>下載後，貴用戶亦可在 LICENSE 檔案中查看完整條款。</p>
+  </div>
+<div class="license-block">
+  <h2>🧙 About hray1413</h2>
+  <p>
+    hray1413 是一位融合技術、詩歌與社群儀式感的 Goblin 工程師。<br>
+    他推進 Minebuntu 專案、設計 Discord bot 語氣包、打造 meme 化 onboarding 流程，<br>
+    並以 debug 為日常修行，RAID 1 為信仰，反對無靈魂技術。<br><br>
+    擅長 HTML/CSS/JS、Flask、Cloudflare Worker、GitHub 自動化與 NAS 支援，<br>
+    更能將任何技術流程轉化為 onboarding 詩歌與 meme 儀式。<br><br>
+    他相信：每段程式碼都該有靈魂，每份 LICENSE 都該有詩意。
+  </p>
+</div>
+<p style="text-align:center;">
+<a href="https://github.com/hray1413" target="_blank">GitHub</a> ｜ 
+  <a href="https://bsky.app/profile/hray1413.bsky.social" target="_blank">Bluesky</a> ｜ 
+  <a href="mailto:xuanzhenhong58@gmail.com">Email</a> ｜ 
+<a href="https://bento.me/hray1413">Bento.me</a>
+</p>
+
+</body>
+</html>
